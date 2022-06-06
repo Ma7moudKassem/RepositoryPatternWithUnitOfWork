@@ -1,4 +1,6 @@
-﻿namespace RepositoryPatternWithUnitOfWork.EF.Data
+﻿using RepositoryPatternWithUnitOfWork.Core;
+
+namespace RepositoryPatternWithUnitOfWork.EF.Data
 {
     public class DataContext : DbContext
     {
@@ -6,5 +8,8 @@
         {
 
         }
+
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
